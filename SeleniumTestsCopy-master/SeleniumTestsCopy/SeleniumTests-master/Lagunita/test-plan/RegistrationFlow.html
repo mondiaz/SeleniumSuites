@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>RegistrationFlow</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+<tr>
+	<td>store</td>
+	<td>javascript{Math.floor(Math.random()*111111);}</td>
+	<td>rand</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Register</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertLocation</td>
+	<td>glob:*lagunita.stanford.edu/register</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Review the Terms of Service</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Review the Terms of Service</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>title=Terms of Service | Stanford Lagunita</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertLocation</td>
+	<td>glob:*lagunita.stanford.edu/tos</td>
+	<td></td>
+</tr>
+<tr>
+	<td>goBack</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a:contains(&quot;Privacy Policy&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>title=Privacy Policy | Stanford Lagunita</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertLocation</td>
+	<td>glob:*lagunita.stanford.edu/privacy</td>
+	<td></td>
+</tr>
+<tr>
+	<td>goBack</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a:contains(&quot;Honor Code&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>title=Honor Code | Stanford Lagunita</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertLocation</td>
+	<td>glob:*lagunita.stanford.edu/honor</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/register</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.action:contains('Create')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h4.message-title</td>
+	<td>We couldn't create your account.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=ul.message-copy li</td>
+	<td>Please enter your Email.</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.status.submission-error:contains('name')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.status.submission-error:contains('username')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.status.submission-error:contains('Password')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.status.submission-error:contains('Honor Code')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='register-form']/div/div/ul/li[5]</td>
+	<td>You must agree to the Stanford Lagunita Honor Code</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='register-form']/div/div/ul/li[6]</td>
+	<td>You must agree to the Stanford Lagunita Terms of Service</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=register-username</td>
+	<td>asdf</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.action:contains('Create')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h4.message-title</td>
+	<td>We couldn't create your account.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=ul.message-copy li</td>
+	<td>Please enter your Email.</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.status.submission-error:contains('name')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.status.submission-error:contains('Password')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.status.submission-error:contains('Honor Code')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='register-form']/div/div/ul/li[5]</td>
+	<td>You must agree to the Stanford Lagunita Terms of Service</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=register-terms_of_service</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.action:contains('Create')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h4.message-title</td>
+	<td>We couldn't create your account.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=ul.message-copy li</td>
+	<td>Please enter your Email.</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.status.submission-error:contains('name')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.status.submission-error:contains('Password')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.status.submission-error:contains('Honor Code')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=register-password</td>
+	<td>removedforsecurityreasons</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.action:contains('Create')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h4.message-title</td>
+	<td>We couldn't create your account.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=ul.message-copy li</td>
+	<td>Please enter your Email.</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.status.submission-error:contains('name')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.status.submission-error:contains('Honor Code')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=register-email</td>
+	<td>selenium-tester@openedx.com</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.action:contains('Create')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h4.message-title</td>
+	<td>We couldn't create your account.</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.status.submission-error:contains('name')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.status.submission-error:contains('Honor Code')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=register-name</td>
+	<td>asdf</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.action:contains('Create')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h4.message-title</td>
+	<td>We couldn't create your account.</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.status.submission-error:contains('Honor Code')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=register-honor_code</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=register-privacy_policy</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.action:contains('Create')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h4.message-title</td>
+	<td>We couldn't create your account.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=ul.message-copy &gt; li</td>
+	<td>It looks like asdf belongs to an existing account. Try again with a different username.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='register-form']/div/div/ul/li[2]</td>
+	<td>It looks like selenium-tester@openedx.com belongs to an existing account. Try again with a different email address.</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=register-username</td>
+	<td>javascript{&quot;asdf&quot; + storedVars['rand'];}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.action:contains('Create')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h4.message-title</td>
+	<td>We couldn't create your account.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=ul.message-copy &gt; li</td>
+	<td>It looks like selenium-tester@openedx.com belongs to an existing account. Try again with a different email address.</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=register-email</td>
+	<td>javascript{&quot;seleniumtestrandom+&quot; + storedVars['rand'] + &quot;@gmail.com&quot;;}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.action:contains('Create')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h4.message-title</td>
+	<td>We couldn't create your account.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=ul.message-copy &gt; li</td>
+	<td>Password: Invalid Length (must be 8 characters or more)</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=register-password</td>
+	<td>removedforsecurityreasons</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.action:contains('Create')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h4.message-title</td>
+	<td>We couldn't create your account.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=ul.message-copy &gt; li</td>
+	<td>Password: Must be more complex (must contain 1 or more uppercase characters, must contain 1 or more digits)</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=register-password</td>
+	<td>removedforsecurityreasons</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.action:contains('Create')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h2.title</td>
+	<td>You're almost there!</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=p.activation-message</td>
+	<td>There's just one more step: Before you enroll in a course, you need to activate your account.</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Courses</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>800</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=article[id^=&quot;course-v1:GlobalHealth&quot;] a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a.register</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h2.title</td>
+	<td>You're almost there!</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=p.activation-message</td>
+	<td>There's just one more step: Before you enroll in a course, you need to activate your account.</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=img.course-image</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.dropdown</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Sign Out</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=li.courses-listing-item div.learn-more</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a.register</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertLocation</td>
+	<td>glob:*&amp;enrollment_action=enroll</td>
+	<td></td>
+</tr>
+<tr>
+	<td>goBackAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Support</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Sign in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Sign in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>break</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--1) Check the suspended ticket Zendesk view-->
+<!--2) Open the most recent activation ticket and copy the activation URL into a new tab-->
+<!--3) Close activation tab and Zendesk tab-->
+<!--4) Click Selenium resume button-->
+<tr>
+	<td>type</td>
+	<td>id=login-email</td>
+	<td>javascript{&quot;seleniumtestrandom+&quot; + storedVars['rand'] + &quot;@gmail.com&quot;;}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=login-password</td>
+	<td>removedforsecurityreasons</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=button.action:contains('Sign in')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertLocation</td>
+	<td>glob:*/dashboard</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Sign Out</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Support</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

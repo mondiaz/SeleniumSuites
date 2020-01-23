@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>ORA2 Pt. 2</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">ORA2 Pt. 2</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/courses/StanfordOnline/OpenEdX/Demo/courseware</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Peer Assessment / ORA</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a:contains('Peer Assessment with Track Changes')</td>
+	<td></td>
+</tr>
+<!--Other staff controls-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=button.ui-staff__button.button-staff-info</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.ui-staff__button.button-staff-info</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.ui-staff__button.button-staff-tools</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.ui-staff_close_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=.vert.vert-1 .wrap-instructor-info a:contains('Staff Debug Info')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=.vert.vert-1 .wrap-instructor-info a:contains('Staff Debug Info')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=lean_overlay</td>
+	<td></td>
+</tr>
+<!--Self assessment-->
+<tr>
+	<td>open</td>
+	<td>/courses/StanfordOnline/OpenEdX/Demo/courseware</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a:contains('Self Assessment Only')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=submission__answer__part__text__1</td>
+	<td>&quot;Eon&quot; by Greg Bear</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#step--response__submit &gt; span.copy</td>
+	<td></td>
+</tr>
+<tr>
+	<td>isConfirmationPresent</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeConfirmation</td>
+	<td>confirm-submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${confirm-submit}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>800</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=assessment__rubric__question--0__0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=assessment__rubric__question--0__0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=assessment__rubric__question--1__0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=self-assessment--001__assessment__submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=span.step__label:contains('Your Grade')</td>
+	<td></td>
+</tr>
+<!--Preview a submission-->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=button.ui-staff__button.button-staff-tools</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.ui-staff__button.button-staff-tools</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=openassessment__student_username</td>
+	<td>stest</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#submit_student_username &gt; span.copy</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=h3.title</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h3.title</td>
+	<td>Learner Response</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.student__answer__display__content</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.student__answer__display__content &gt; ol.submission__answer__display__content &gt; li.submission__answer__part &gt; div.submission__answer__part__text &gt; div.submission__answer__part__text__value &gt; p</td>
+	<td>&quot;Eon&quot; by Greg Bear</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.ui-staff__button.button-staff-tools</td>
+	<td></td>
+</tr>
+<!--Delete a student state-->
+<tr>
+	<td>click</td>
+	<td>id=i4x_StanfordOnline_OpenEdX_openassessment_4ebdb32fabe04b9e8e34d15cb9e629d4_trig</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'Delete Student State')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=.success:contains('deleted student state')</td>
+	<td></td>
+</tr>
+<!--File Uploads in ORA2-->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Peer Assessment with File Uploads</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a:contains('Peer Assessment with File Uploads')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=article[class=&quot;submission__answer__part__prompt ui-toggle-visibility&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>highlight</td>
+	<td>css=article[class=&quot;submission__answer__part__prompt ui-toggle-visibility&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=submission__answer__part__text__1</td>
+	<td>uploading a file, la dee da</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=submission__answer__upload</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>id=submission__answer__upload</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<!--1) Select a file that IS NOT a JPG, PNG, GIF or PDF file.-->
+<!--2) Click "Open" in the pop-up while test is executing "pause" command.-->
+<!--3) Test will continue after 10 seconds.-->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='upload__error']/div/div/p</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h3.message__title</td>
+	<td>We could not upload this file</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='upload__error']/div/div/p</td>
+	<td>You can upload files with these file types: JPG, PNG, GIF or PDF</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>id=submission__answer__upload</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<!--1) Select a file that IS a JPG, PNG, GIF or PDF file.-->
+<!--2) Click "Open" in the pop-up while test is executing "pause" command.-->
+<!--3) Test will continue after 10 seconds.-->
+<tr>
+	<td>click</td>
+	<td>id=file__upload</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=submission__answer__file</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#step--response__submit &gt; span.copy</td>
+	<td></td>
+</tr>
+<tr>
+	<td>isConfirmationPresent</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeConfirmation</td>
+	<td>confirm-submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${confirm-submit}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=div.peer-assessment__display</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=div.peer-assessment__display &gt; #submission__pdf-and-image__upload &gt; #submission__answer__file</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=.peer-assessment__display__file &gt; a:contains('file associated with this submission')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeAttribute</td>
+	<td>css=a[href*=&quot;amazonaws&quot;]@target</td>
+	<td>window_ID</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>800</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>${window_ID}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>close</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=assessment__rubric__question--0__0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=peer-assessment--001__assessment__submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=#openassessment__self-assessment</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=#self-assessment &gt; #submission__pdf-and-image__upload &gt; #submission__answer__file</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#self-assessment &gt; #submission__pdf-and-image__upload &gt; #submission__answer__file</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeAttribute</td>
+	<td>css=a[href*=&quot;amazonaws&quot;]@target</td>
+	<td>window_ID</td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>${window_ID}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>close</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=assessment__rubric__question--0__0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=label.answer__label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=self-assessment--001__assessment__submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=i4x_StanfordOnline_OpenEdX_openassessment_fc1719e8398346b38508aa74dbb1798f_trig</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Delete Student State</td>
+	<td></td>
+</tr>
+<!--Multiple prompts-->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Peer Assessment with Multiple Prompts</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a:contains('Peer Assessment with Multiple Prompts')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=h2.step__title</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=li.submission__answer__part:nth-child(1) article</td>
+	<td></td>
+</tr>
+<tr>
+	<td>highlight</td>
+	<td>css=li.submission__answer__part:nth-child(1) article</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=textarea[id|=&quot;submission__answer__part__text__1&quot;]</td>
+	<td>one</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=li.submission__answer__part:nth-child(2) article</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=textarea[id|=&quot;submission__answer__part__text__2&quot;]</td>
+	<td>two</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=li.submission__answer__part:nth-child(3) article</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=textarea[id|=&quot;submission__answer__part__text__3&quot;]</td>
+	<td>three prompts</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#step--response__submit &gt; span.copy</td>
+	<td></td>
+</tr>
+<tr>
+	<td>isConfirmationPresent</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeConfirmation</td>
+	<td>confirm-submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${confirm-submit}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<!--Delete a student state-->
+<tr>
+	<td>click</td>
+	<td>id=i4x_StanfordOnline_OpenEdX_openassessment_11c169136aea4bfe84f8abf34dcd5a4c_trig</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'Delete Student State')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refresh</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=submission__answer__part__text__1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>id=submission__answer__part__text__1</td>
+	<td></td>
+</tr>
+<!--Leaderboards-->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Peer Assessment with Leader Board</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a:contains('Peer Assessment with Leader Board')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>tab_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=h3.message__title</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h3.message__title</td>
+	<td>You Have Completed This Assignment</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=#openassessment__leaderboard</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=#openassessment__leaderboard</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=h3.leaderboard__title:contains('Top-Scoring Responses')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=h4.leaderboard__list__number</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h4.leaderboard__list__number</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.leaderboard__answer:contains('Your peer's response')</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

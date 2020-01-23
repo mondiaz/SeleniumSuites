@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>DragDrop</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">DragDrop</td></tr>
+</thead><tbody>
+<!--Make sure the window the test is running in is full screen so it all shows as it runs.-->
+<tr>
+	<td>open</td>
+	<td>/courses/StanfordOnline/OpenEdX/Demo/courseware</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Advanced Questions (Built-in)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a:contains(&quot;Drag and Drop&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=tab_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.reset</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>css=div.base_image_container:empty</td>
+	<td></td>
+</tr>
+<tr>
+	<td>highlight</td>
+	<td>css=img[alt=&quot;Drop target image&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//div[@id='problem_i4x-StanfordOnline-OpenEdX-problem-Drag_and_Drop_2']/div[2]/div/div/span/div/div[2]/div[2]/div/div/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>dragAndDropToObject</td>
+	<td>//div[@id='problem_i4x-StanfordOnline-OpenEdX-problem-Drag_and_Drop_2']/div[2]/div/div/span/div/div[2]/div[2]/div/div/div</td>
+	<td>css=div.base_image_container &gt; div</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.check.Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=p.status</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=p.status</td>
+	<td>incorrect</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//div[@id='problem_i4x-StanfordOnline-OpenEdX-problem-Drag_and_Drop_2']/div[2]/div/div/span/div/div[2]/div[2]/div/div[2]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>dragAndDropToObject</td>
+	<td>//div[@id='problem_i4x-StanfordOnline-OpenEdX-problem-Drag_and_Drop_2']/div[2]/div/div/span/div/div[2]/div[2]/div/div[2]/div</td>
+	<td>//div[@id='problem_i4x-StanfordOnline-OpenEdX-problem-Drag_and_Drop_2']/div[2]/div/div/span/div/div/div[2]</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=button.check.Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.check.Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=p.status</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=p.status</td>
+	<td>correct</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=button.reset</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.reset</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

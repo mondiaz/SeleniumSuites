@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>New Test</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+<!--The hints seem to load a bit slowly.-->
+<tr>
+	<td>open</td>
+	<td>/courses/StanfordOnline/OpenEdX/Demo/courseware</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Advanced Questions (Built-in)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a:contains(&quot;Adaptive Hint Questions&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=tab_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=input_i4x-StanfordOnline-OpenEdX-problem-Hot_Cold_hints_2_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=input_i4x-StanfordOnline-OpenEdX-problem-Hot_Cold_hints_2_1</td>
+	<td>20</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.check.Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=span.status[data-tooltip=&quot;This is incorrect.&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span.status span.sr</td>
+	<td>20 - incorrect</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=span.message &gt; font</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span.message &gt; font</td>
+	<td>exact:Hint: Much too low.</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=button.reset</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.reset</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=input_i4x-StanfordOnline-OpenEdX-problem-Hot_Cold_hints_2_1</td>
+	<td>1000000</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.check.Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=span.status[data-tooltip=&quot;This is incorrect.&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span.status span.sr</td>
+	<td>1000000 - incorrect</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=span.message &gt; font</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span.message &gt; font</td>
+	<td>exact:Hint: Much too high.</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=button.reset</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.reset</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=input_i4x-StanfordOnline-OpenEdX-problem-Hot_Cold_hints_2_1</td>
+	<td>514</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.check.Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=span.status[data-tooltip=&quot;This is correct.&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span.status span.sr</td>
+	<td>514 - correct</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=span.message &gt; font</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span.message &gt; font</td>
+	<td>exact:Hint: Exact answer: 514 miles</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.show</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=answer_i4x-StanfordOnline-OpenEdX-problem-Hot_Cold_hints_2_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=answer_i4x-StanfordOnline-OpenEdX-problem-Hot_Cold_hints_2_1</td>
+	<td>514</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=button.reset</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.reset</td>
+	<td></td>
+</tr>
+<!--Checkboxes with adaptive hints-->
+<tr>
+	<td>click</td>
+	<td>id=tab_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=fieldset &gt; label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=fieldset &gt; label:nth-of-type(2)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=fieldset &gt; label:nth-of-type(3)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>focus</td>
+	<td>css=button.check.Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.check.Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=span:contains('incorrect')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=span.message &gt; font</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=button.reset</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.reset</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=fieldset &gt; label:contains('red')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=fieldset &gt; label:contains('blue')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=fieldset &gt; label:contains('green')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=fieldset &gt; label:contains('gray')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.check.Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=span:contains('correct')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=span.message &gt; font</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=span.message &gt; font:contains('gotten them all right')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=button.show</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.show</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>focus</td>
+	<td>css=button.reset</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.detailed-solution:contains('red, green, gray and blue')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=button.reset</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.reset</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

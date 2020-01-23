@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>Help and Problem on Page</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Help</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=a[href*=&quot;stanfordonlinecmesupport&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>link=Post in the Forum</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#help_wrapper &gt; button.close-modal.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>css=a:contains(&quot;Problem on Page?&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/courses/StanfordOnline/OpenEdX/Demo/about</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Help</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Access the Help Center</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=by clicking here</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=by clicking here</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeAttribute</td>
+	<td>css=a[href*=&quot;stanfordonlinecmesupport/newticket&quot;]@target</td>
+	<td>window_ID</td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>${window_ID}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=Contact Name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=property(Email)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=property(Subject)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=html</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=body.ze_body</td>
+	<td>asdf</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=captchaImage</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=input[value=&quot;Submit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input[value=&quot;Submit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=errorMsg_property(Contact Name)</td>
+	<td>Contact Name cannot be none</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=errorMsg_property(Email)</td>
+	<td>Email cannot be none</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=errorMsg_property(Subject)</td>
+	<td>Subject cannot be none</td>
+</tr>
+<tr>
+	<td>waitForAlertPresent</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeAlert</td>
+	<td>confirm-alert</td>
+	<td></td>
+</tr>
+<tr>
+	<td>close</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

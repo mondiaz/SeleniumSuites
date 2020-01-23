@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>DemoRadioButton</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">DemoRadioButton</td></tr>
+</thead><tbody>
+<!--checks that the markdown for shuffling answers is working-->
+<tr>
+	<td>open</td>
+	<td>courses/StanfordOnline/OpenEdX/Demo/info</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Course</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Custom Questions</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a:contains('Shuffle')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.problem:contains('shuffle the answer options')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=input[id*='ee05e0964d0342e0a77a5aec550344be_2_1_choice_']</td>
+	<td></td>
+</tr>
+<!--stores text of some of the answer options before and after submitting and resetting-->
+<tr>
+	<td>storeText</td>
+	<td>css=fieldset &gt; label</td>
+	<td>V1</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${V1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=fieldset &gt; label:nth-child(2)</td>
+	<td>V2</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${V2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=fieldset &gt; label:nth-child(3)</td>
+	<td>V3</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${V3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=fieldset &gt; label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.check.Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.reset</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>800</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=fieldset &gt; label</td>
+	<td>V1_B</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${V1_B}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=fieldset &gt; label:nth-child(2)</td>
+	<td>V2_B</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${V2_B}</td>
+	<td></td>
+</tr>
+<!--checks that V1 (1st answer option 1st time) does not match (!==) V1_B (1st answer option 2nd time)-->
+<tr>
+	<td>verifyEval</td>
+	<td>storedVars['V1']!==storedVars['V1_B']</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>check if ${V1}!==${V1_B}</td>
+	<td></td>
+</tr>
+<!--checks that V2 (2nd answer option 1st time) does not match (!==) V2_B (2nd answer option 2nd time)-->
+<tr>
+	<td>verifyEval</td>
+	<td>storedVars['V2']!==storedVars['V2_B']</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>check if ${V2}!==${V2_B}</td>
+	<td></td>
+</tr>
+<!--checks that either the 1st answer options don't match, or the 2nd answer options don't match-->
+<tr>
+	<td>verifyEval</td>
+	<td>storedVars['V1']!==storedVars['V1_B'] || storedVars['V2']!==storedVars['V2_B']</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.reset</td>
+	<td></td>
+</tr>
+<!--the verifyEval commands may fail occasionally, due to limited answer and shuffling options. rerun test if needed.-->
+</tbody></table>
+</body>
+</html>

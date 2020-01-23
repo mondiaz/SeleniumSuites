@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>New Test</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/courses/StanfordOnline/OpenEdX/Demo/info</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Course</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Displaying Images</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a[href*=&quot;Images&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=img[alt=&quot;magnify&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseOver</td>
+	<td>//div[@class='zooming-image-place']//a//img</td>
+	<td>80,135</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[@class='zooming-image-place']//a//img</td>
+	<td>80,135</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>800</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=img.appended</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=img.appended</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=img[alt=&quot;magnify&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[@class='zooming-image-place']//a//img</td>
+	<td>195,135</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[@class='zooming-image-place']//a//img</td>
+	<td>195,135</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>800</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[@class='zooming-image-place']//a//img</td>
+	<td>265,235</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[@class='zooming-image-place']//a//img</td>
+	<td>265,235</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>800</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=img.appended</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=img.appended</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseOut</td>
+	<td>css=img.appended</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>css=p:contains(You can view)</td>
+	<td>0,0</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Full Screen Image</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div[class=&quot;imagemodal_block&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=img[alt=&quot;Image Modal XBlock&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=button[class=&quot;fullscreen&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=button[class=&quot;fullscreen&quot;]</td>
+	<td>Fullscreen</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button[class=&quot;fullscreen&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div[class=&quot;curtain&quot;][style=&quot;display: block;&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.zoom</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseDown</td>
+	<td>css=img.zoomed</td>
+	<td></td>
+</tr>
+<tr>
+	<td>dragAndDrop</td>
+	<td>css=img.zoomed</td>
+	<td>+50,-100</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div[class=&quot;curtain&quot;] button[class=&quot;close&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div[class=&quot;curtain&quot;] button[class=&quot;close&quot;]</td>
+	<td>Close</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div[class=&quot;curtain&quot;] button[class=&quot;close&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>EmailDistQuery</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">EmailDistQuery</td></tr>
+</thead><tbody>
+<!--Works best at slow speed-->
+<tr>
+	<td>open</td>
+	<td>/courses/StanfordOnline/OpenEdX/Demo/info</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Instructor</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Queries</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.email-widget h2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.email-widget h2</td>
+	<td>Email Distribution</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.wrapper-email-select</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.email-selection-label:contains('Inclusion')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=select.single-email-selector</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=select.single-email-selector &gt; option:contains('AND')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=select.single-email-selector &gt; option:contains('NOT')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=select.single-email-selector &gt; option:contains('OR')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=select.single-email-selector</td>
+	<td>label=AND</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div[class=&quot;email-list-container active&quot;]:nth-of-type(2) &gt; div &gt; select</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div[class=&quot;email-list-container active&quot;]:nth-of-type(2) &gt; div &gt; select &gt; option:nth-of-type(2)</td>
+	<td>Section</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div[class=&quot;email-list-container active&quot;]:nth-of-type(2) &gt; div &gt; select &gt; option:nth-of-type(3)</td>
+	<td>Problem</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=div[class=&quot;email-list-container active&quot;]:nth-of-type(2) &gt; div &gt; select</td>
+	<td>label=Section</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.section_specific.active &gt; div.email-list-container.active &gt; div.wrapper-email-select</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.section_specific.active &gt; div.email-list-container.active &gt; div.wrapper-email-select &gt; div.email-selection-label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=chapter/Introduction</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=div.section_specific.active &gt; div.email-list-container.active &gt; div.wrapper-email-select &gt; select.single-email-selector</td>
+	<td>label=Introduction</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//section[@id='queries']/div/div/div[3]/div[6]/div/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[@id='queries']/div/div/div[3]/div[6]/div/div/div</td>
+	<td>Filter On</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[@id='queries']/div/div/div[3]/div[6]/div/div/select/option[2]</td>
+	<td>Opened</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[@id='queries']/div/div/div[3]/div[6]/div/div/select/option[3]</td>
+	<td>Not Opened</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//section[@id='queries']/div/div/div[3]/div[6]/div/div/select</td>
+	<td>label=Opened</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=addQuery</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=table.emailWidget.queryTable</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.Working</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=div.done</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=table.emailWidget.queryTable:contains('AND')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.emailWidget.estimated</td>
+	<td>Approx 0 students selected</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>name=getest</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=getest</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyNotText</td>
+	<td>css=div.emailWidget.estimated</td>
+	<td>Approx 0 students selected</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>name=savequery</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=savequery</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=tbody.emailWidget.savedQueriesTable</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>name=getcsv</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=getcsv</td>
+	<td></td>
+</tr>
+<!--Click "OK" or "Cancel" to close pop-up window-->
+<tr>
+	<td>pause</td>
+	<td>900</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>name=startover</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=startover</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=tbody.emailWidget.savedQueriesTable</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.loadQuery</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.loadQuery</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.Working</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=div.done</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.remove</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.remove</td>
+	<td>Remove</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>900</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>css=table.emailWidget.queryTable:contains('AND')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.deleteSaved</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>css=div.loadQuery</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>DemoDiscussion</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">DemoDiscussion</td></tr>
+</thead><tbody>
+<!--Testing main discussion tab-->
+<tr>
+	<td>open</td>
+	<td>courses/StanfordOnline/OpenEdX/Demo/info</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Discussion</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Discussion</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=New Post</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=a.post-topic-button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a.post-topic-button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'General')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=title</td>
+	<td>test post123</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=wmd-input-js-post-body-undefined</td>
+	<td>testing testing testing</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input.submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input.forum-nav-search-input</td>
+	<td>just a suggestion</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=div.response-count</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=input.forum-nav-search-input</td>
+	<td>${KEY_ENTER}</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=a.forum-nav-thread-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span[class=&quot;forum-nav-thread-title&quot;]:contains(suggestion)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input.forum-nav-search-input</td>
+	<td>test post123</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=input.forum-nav-search-input</td>
+	<td>${KEY_ENTER}</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=span.forum-nav-thread-title</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.forum-nav-thread-title</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=a.action-button.action-more &gt; span.action-icon</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=.icon.fa.fa-ellipsis-h</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Delete</td>
+	<td></td>
+</tr>
+<tr>
+	<td>getConfirmation</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>courses/StanfordOnline/OpenEdX/Demo/discussion/forum</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input.forum-nav-search-input</td>
+	<td>test post123</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=input.forum-nav-search-input</td>
+	<td>${KEY_ENTER}</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=p.message</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=p.message</td>
+	<td>No threads matched your query.</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>courses/StanfordOnline/OpenEdX/Demo/info</td>
+	<td></td>
+</tr>
+<!--Testing inline discussion components-->
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Course</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Discussions</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a:contains(&quot;Inline Discussion&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.discussion-module</td>
+	<td>Show Discussion New Post</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.button-text</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=section.threads article.discussion-thread h1.post-title</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=section.threads article.discussion-thread div.group-visibility-label:contains('visible only to Good students')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Expand discussion</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=textarea[id*=&quot;wmd-input-reply-body&quot;]</td>
+	<td>testtest</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.discussion-response i.icon.fa.fa-ellipsis-h</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#action-menu-response &gt; ul.actions-dropdown-list &gt; li.actions-item &gt; a.action-list-item.action-delete</td>
+	<td></td>
+</tr>
+<tr>
+	<td>getConfirmation</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Hide Discussion</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

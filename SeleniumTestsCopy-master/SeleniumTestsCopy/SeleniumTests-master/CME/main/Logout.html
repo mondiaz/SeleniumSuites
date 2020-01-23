@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>Logout</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Logout</td></tr>
+</thead><tbody>
+<tr>
+	<td>storeEval</td>
+	<td>{new Date()}</td>
+	<td>Cur_time</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${Cur_time}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Sign in</td>
+	<td>Sign in</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>{new Date()}</td>
+	<td>Cur_time2</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${Cur_time2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>{(storedVars[&quot;Cur_time2&quot;].getTime() - storedVars[&quot;Cur_time&quot;].getTime())/1000}</td>
+	<td>diff</td>
+</tr>
+<!--Elapsed time so far-->
+<tr>
+	<td>echo</td>
+	<td>${diff}</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>New Test</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/courses/StanfordOnline/OpenEdX/Demo/about</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=li &gt; p:contains('Course Number')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span.course-number</td>
+	<td>Feature</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div#content * li + li:contains('Classes Start')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=span.start-date</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div#content * li(3):contains('Classes End')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=span.final-date</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div#content * li(4):contains('Estimated Effort')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>css=span.start-date:empty</td>
+	<td> </td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span.register.disabled</td>
+	<td>You are enrolled in this course</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=a &gt; strong</td>
+	<td>View Course</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a.user-link &gt; div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div[data-course-key=&quot;StanfordOnline/OpenEdX/Demo&quot;] i.fa.fa-cog</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=a.action.action-unenroll[data-course-id=&quot;StanfordOnline/OpenEdX/Demo&quot;]</td>
+	<td>Unenroll</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a.action.action-unenroll[data-course-id=&quot;StanfordOnline/OpenEdX/Demo&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#unenroll_form &gt; div.submit &gt; input[name=&quot;submit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/courses/StanfordOnline/OpenEdX/Demo/about</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1200</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Enroll in Feature</td>
+	<td>Enroll in Feature</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Enroll in Feature</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/courses/CME/001/2013-2015/about</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div#content * li(5):contains('Price')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/section/section/section[2]/section/ol/li[5]/span</td>
+	<td>$25</td>
+</tr>
+</tbody></table>
+</body>
+</html>

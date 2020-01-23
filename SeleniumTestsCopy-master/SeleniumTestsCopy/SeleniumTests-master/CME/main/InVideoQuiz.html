@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>New Test</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/courses/StanfordOnline/OpenEdX/Demo/courseware/24ed91f37a72417b9578db92a8db583b/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=action-preview-select</td>
+	<td>label=Staff</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Videos</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=div.chapter-menu.is-open &gt; div.menu-item a:contains('Automatically display')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=.vert.vert-0 .video-player</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1200</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=.vert.vert-2 .problem</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=p.in-video-alert</td>
+	<td>This component will appear in the video at 0:08</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h3.problem-header</td>
+	<td>Multiple Choice</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.problem &gt; div &gt; div &gt; p</td>
+	<td>exact:Where is Anant a professor of electrical engineering and computer science?</td>
+</tr>
+<tr>
+	<td>selectAndWait</td>
+	<td>id=action-preview-select</td>
+	<td>label=Student</td>
+</tr>
+<tr>
+	<td>verifyNotText</td>
+	<td>css=p.in-video-alert</td>
+	<td>This component will appear in the video at 0:08</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.ytp-large-play-button.ytp-button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<!--let video get to 0:08-->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=.vert.vert-2.in-video-problem-wrapper</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=.vert.vert-2 .problem</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.problem &gt; div &gt; div &gt; p</td>
+	<td>exact:Where is Anant a professor of electrical engineering and computer science?</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=input_i4x-StanfordOnline-OpenEdX-problem-6e5906705ab542b797dd458ac6ffc188_2_1_choice_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=.capa_inputtype fieldset input[value='choice_1']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=button.in-video-continue</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.check.Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=button.in-video-continue</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.in-video-continue</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//ol[@id='transcript-captions']/li[2]</td>
+	<td>ANANT AGARWAL: Welcome to edX.</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.video_control.pause</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.reset</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectAndWait</td>
+	<td>id=action-preview-select</td>
+	<td>label=Staff</td>
+</tr>
+</tbody></table>
+</body>
+</html>

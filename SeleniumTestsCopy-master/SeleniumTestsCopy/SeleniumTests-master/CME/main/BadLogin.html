@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>BadLogin</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">BadLogin</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Sign in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=email</td>
+	<td>baduser@nodomain.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=password</td>
+	<td>removedforsecurityreasons</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//form[@id='login-form']/div[2]/h3</td>
+	<td>We couldn't log you in.</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>{new Date()}</td>
+	<td>Cur_time2</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${Cur_time2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>{(storedVars[&quot;Cur_time2&quot;].getTime() - storedVars[&quot;Cur_time&quot;].getTime())/1000}</td>
+	<td>diff</td>
+</tr>
+<!--Elapsed time so far-->
+<tr>
+	<td>echo</td>
+	<td>${diff}</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

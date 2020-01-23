@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>New Test</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+<!--checks that xblocks worth points are accounted for along with capa problems in the progress page-->
+<tr>
+	<td>open</td>
+	<td>/courses/Testing/Testing123/Evergreen/progress</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.tickLabel</td>
+	<td>HW 01</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.tickLabel:nth-child(2)</td>
+	<td>HW 02</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.tickLabel:nth-child(3)</td>
+	<td>HW 03</td>
+</tr>
+<tr>
+	<td>mouseMoveAt</td>
+	<td>css=canvas.overlay</td>
+	<td>360,10</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=body &gt; script:nth-child(8):contains('Homework 2')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=body &gt; script:nth-child(8):contains('graded subsection w capa and xblocks - 0% (0/6)')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/courses/Testing/Testing123/Evergreen/courseware</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Section One - Released</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a p:contains('1.2 - graded subsection w capa and xblocks')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=.vert.vert-4 input.check_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>getCssCount</td>
+	<td>css=div[class*='problem-progress']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCssCount</td>
+	<td>css=div[class*='problem-progress']</td>
+	<td>totalCapa</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${totalCapa}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>getCssCount</td>
+	<td>css=div[class*='problem_progress']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCssCount</td>
+	<td>css=div[class*='problem_progress']</td>
+	<td>totalXBlock</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.problem_progress</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${totalXBlock}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>${totalCapa}+${totalXBlock}</td>
+	<td>totalProblems</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>${totalProblems}+1</td>
+	<td>totalProblemPoints</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>There are ${totalProblems} problems in this assignment, for a total of ${totalProblemPoints} points possible.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=.vert.vert-0 div[data-block-type=&quot;problem&quot;] .capa_inputtype fieldset input[value=choice_2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=.vert.vert-0 button.check.Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=.vert.vert-0 .problem-progress</td>
+	<td>(1/1 point)</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=.vert.vert-1 div[data-block-type=&quot;freetextresponse&quot;] textarea[class=&quot;student_answer&quot;]</td>
+	<td>hi</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=.vert.vert-1 .action button.check.Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=.vert.vert-1 .problem-progress</td>
+	<td>(1/1 point)</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=.vert.vert-2 div[data-block-type=&quot;problem&quot;] select:contains('India')</td>
+	<td>label=India</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=.vert.vert-2 button.check.Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=.vert.vert-2 .problem-progress</td>
+	<td>(1/1 point)</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=.vert.vert-3 div[data-block-type=&quot;submit-and-compare&quot;] textarea[class=&quot;answer&quot;]</td>
+	<td>I have no idea.</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=.vert.vert-3 input.submit_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=.vert.vert-3 .problem_progress</td>
+	<td>(1/1 point)</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=.vert.vert-4 div[data-block-type=&quot;inline-dropdown&quot;] select:contains('tomato')</td>
+	<td>label=tomato</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=.vert.vert-4 div[data-block-type=&quot;inline-dropdown&quot;] select:contains('onion')</td>
+	<td>label=onion</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=.vert.vert-4 input.check_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=.vert.vert-4 .problem_progress</td>
+	<td>(2/2 points)</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/courses/Testing/Testing123/Evergreen/progress</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseMoveAt</td>
+	<td>css=canvas.overlay</td>
+	<td>360,10</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=body &gt; script:nth-child(8):contains('Homework 2')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>css=body &gt; script:nth-child(8):contains('graded subsection w capa and xblocks - 0% (0/6)')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=body &gt; script:nth-child(8):contains('graded subsection w capa and xblocks - 100% (6/6)')</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

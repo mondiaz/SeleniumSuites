@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>New Test</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/courses/StanfordOnline/OpenEdX/Demo/info</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Course</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a:contains('Leveraging')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a:contains('Understanding LTI')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=tab_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=a:contains('View resource')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=nav.sequence-bottom &gt; button.sequence-nav-button.button-next</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=h3.problem-header</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=View resource in a new window</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a[href*=&quot;_lti;&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectPopUp</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--Click "Continue" in the security alert pop-up while test is executing "pause" command.-->
+<tr>
+	<td>pause</td>
+	<td>100</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=id_outcomes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=id_outcomes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>answerOnNextPrompt</td>
+	<td>1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@value='Update'])[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertPrompt</td>
+	<td>Please enter an outcome value (0-1)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=TB_closeWindowButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=TB_closeWindowButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>close</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.problem-progress</td>
+	<td>(5.00 / 5.00 points)</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Progress</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.tickLabel:contains('LTI')</td>
+	<td>LTI 01</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Course</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a:contains('Understanding LTI')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=tab_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=View resource in a new window</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a[href*=&quot;_lti;&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeAttribute</td>
+	<td>css=a[href*=&quot;_lti;&quot;]@target</td>
+	<td>window_ID</td>
+</tr>
+<tr>
+	<td>waitForPopUp</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectPopUp</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--Click "Continue" in the security alert pop-up while test is executing "pause" command.-->
+<tr>
+	<td>pause</td>
+	<td>100</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>${window_ID}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=id_outcomes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>answerOnNextPrompt</td>
+	<td>0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@value='Update'])[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertPrompt</td>
+	<td>Please enter an outcome value (0-1)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=TB_closeWindowButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=TB_closeWindowButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>close</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyNotText</td>
+	<td>css=div.problem-progress</td>
+	<td>(5.00 / 5.00 points)</td>
+</tr>
+</tbody></table>
+</body>
+</html>

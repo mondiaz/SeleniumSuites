@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>New Test</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/courses/StanfordOnline/OpenEdX/Demo/courseware</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Cohort-Specific Content</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a:contains('What Section are you in')</td>
+	<td></td>
+</tr>
+<!--checks which (all) components are visible to staff user stest-->
+<tr>
+	<td>verifySelectedLabel</td>
+	<td>css=#action-preview-select</td>
+	<td>Staff</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=.vert.vert-1 div[data-block-type=&quot;video&quot;] h3:contains('Section 1')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=.vert.vert-2 div[data-block-type=&quot;video&quot;] h3:contains('Section 2')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=.vert.vert-3 div[data-block-type=&quot;video&quot;] h3:contains('Section 3')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=.vert.vert-4 div[data-block-type=&quot;video&quot;] h3:contains('Section 4')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=.vert.vert-5 div[data-block-type=&quot;problem&quot;] div h3:contains('Section 1: Who was in the video')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=.vert.vert-6 div[data-block-type=&quot;freetextresponse&quot;] div h2:contains('Section 2: Name that video!')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=.vert.vert-7 div[data-block-type=&quot;problem&quot;] div h3:contains('Section 3: Which video')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=.vert.vert-8 div[data-block-type=&quot;freetextresponse&quot;] div h2:contains('Section 4: Discuss what you watched')</td>
+	<td></td>
+</tr>
+<!--checks that assigning stest2 and stest3 to cohorts works-->
+<tr>
+	<td>open</td>
+	<td>/courses/StanfordOnline/OpenEdX/Demo/instructor</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Cohorts</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=cohort-select</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=select:contains('Section 1 (1)')</td>
+	<td>label=Section 1 (1)</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Selected tab Manage Students</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=cohort-management-group-add-students</td>
+	<td>stest2</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=.form-actions button:contains('Add Students')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=h3.message-title</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h3.message-title</td>
+	<td>1 student has been added to this cohort</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.message.message-confirmation</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=select:contains('Section 3 (0)')</td>
+	<td>label=Section 3 (0)</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Selected tab Manage Students</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=cohort-management-group-add-students</td>
+	<td>stest3</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=.form-actions button:contains('Add Students')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=h3.message-title</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h3.message-title</td>
+	<td>1 student has been added to this cohort</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.message.message-confirmation</td>
+	<td></td>
+</tr>
+<!--checks that certain graded content is visible to participant stest2-->
+<tr>
+	<td>open</td>
+	<td>/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Sign in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=email</td>
+	<td>selenium-tester2@openedx.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=password</td>
+	<td>removedforsecurityreasons</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=.login-button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/courses/StanfordOnline/OpenEdX/Demo/courseware/0c449f8c04cd4516a8fa58d429947a4b/7fd493455f79430990cf0662a3d67f17/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=.vert.vert-1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=.vert.vert-1 div[data-block-type=&quot;video&quot;] h3:contains('Section 1')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=.vert.vert-2 div[data-block-type=&quot;problem&quot;] div h3:contains('Section 1: Who was in the video')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>css=div[data-block-type=&quot;video&quot;] h3:contains('Section 2')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>css=div[data-block-type=&quot;video&quot;] h3:contains('Section 3')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>css=div[data-block-type=&quot;video&quot;] h3:contains('Section 4')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>css=div[data-block-type=&quot;freetextresponse&quot;] div h2:contains('Section 2: Name that video!')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>css=div[data-block-type=&quot;problem&quot;] div h3:contains('Section 3: Which video')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>css=div[data-block-type=&quot;freetextresponse&quot;] div h2:contains('Section 4: Discuss what you watched')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=.vert.vert-2 .problem select</td>
+	<td>label=Anant Agarwal</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=.vert.vert-2 button.check.Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=.vert.vert-2 span[class = &quot;status correct&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=.menu-item.active.graded</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=a p:contains('What Section are you in')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=.menu-item.active.graded a p:nth-child(2):contains('Homework')</td>
+	<td></td>
+</tr>
+<!--checks that stest2 is only graded on the cohorted content stest2 can see-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Progress</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseMoveAt</td>
+	<td>css=canvas.overlay</td>
+	<td>650,10</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=body &gt; script:nth-child(8):contains('Homework 12 - What Section are you in? - 100% (1/1)')</td>
+	<td></td>
+</tr>
+<!--checks that different graded content is visible to participant stest3-->
+<tr>
+	<td>open</td>
+	<td>/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Sign in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=email</td>
+	<td>selenium-tester3@openedx.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=password</td>
+	<td>removedforsecurityreasons</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=.login-button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/courses/StanfordOnline/OpenEdX/Demo/courseware/0c449f8c04cd4516a8fa58d429947a4b/7fd493455f79430990cf0662a3d67f17/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=.vert.vert-1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=.vert.vert-1 div[data-block-type=&quot;video&quot;] h3:contains('Section 3')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=.vert.vert-2 div[data-block-type=&quot;problem&quot;] div h3:contains('Section 3: Which video')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>css=div[data-block-type=&quot;video&quot;] h3:contains('Section 1')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>css=div[data-block-type=&quot;video&quot;] h3:contains('Section 2')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>css=div[data-block-type=&quot;video&quot;] h3:contains('Section 4')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>css=div[data-block-type=&quot;problem&quot;] div h3:contains('Section 1: Who was in the video')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>css=div[data-block-type=&quot;freetextresponse&quot;] div h2:contains('Section 2: Name that video!')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>css=div[data-block-type=&quot;freetextresponse&quot;] div h2:contains('Section 4: Discuss what you watched')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=fieldset &gt; label:contains('David Letterman')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input[value=choice_5]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.check.Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=span[class = &quot;status correct&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=.menu-item.active.graded</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=a p:contains('What Section are you in')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=.menu-item.active.graded a p:nth-child(2):contains('Homework')</td>
+	<td></td>
+</tr>
+<!--checks that stest3 is graded on only the cohorted content stest3 can see-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Progress</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.tickLabel:contains('HW 12')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseMoveAt</td>
+	<td>css=canvas.overlay</td>
+	<td>650,10</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=body &gt; script:nth-child(8):contains('Homework 12 - What Section are you in? - 100% (1/1)')</td>
+	<td></td>
+</tr>
+<!--switches back to stest and clears submissions-->
+<tr>
+	<td>open</td>
+	<td>/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Sign in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=email</td>
+	<td>selenium-tester@openedx.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=password</td>
+	<td>removedforsecurityreasons</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=.login-button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/courses/StanfordOnline/OpenEdX/Demo/courseware/0c449f8c04cd4516a8fa58d429947a4b/7fd493455f79430990cf0662a3d67f17/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=.vert.vert-5 a:contains(Staff Debug Info)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=sd_fu_490070abf0d84ad09b3cbd84dacbacc1</td>
+	<td>stest2</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'Delete Student State')])[6]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=.success:contains('deleted student state')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=lean_overlay</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=.vert.vert-7 a:contains(Staff Debug Info)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=sd_fu_a947862e8a684deabd44f00b9bed0b73</td>
+	<td>stest3</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'Delete Student State')])[8]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=.success:contains('deleted student state')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=lean_overlay</td>
+	<td></td>
+</tr>
+<!--assigns stest2 and stest3 to different cohorts-->
+<tr>
+	<td>open</td>
+	<td>/courses/StanfordOnline/OpenEdX/Demo/instructor</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Cohorts</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=cohort-select</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=select:contains('Section 3 (1)')</td>
+	<td>label=Section 3 (1)</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=cohort-management-group-add-students</td>
+	<td>stest2</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=.form-actions button:contains('Add Students')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=div.message.message-confirmation</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=select:contains('Section 1 (0)')</td>
+	<td>label=Section 1 (0)</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=cohort-management-group-add-students</td>
+	<td>stest3</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=.form-actions button:contains('Add Students')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=div.message.message-confirmation</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

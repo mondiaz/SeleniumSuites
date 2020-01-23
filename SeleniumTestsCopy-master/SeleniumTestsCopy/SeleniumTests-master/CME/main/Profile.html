@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>Profile</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Profile</td></tr>
+</thead><tbody>
+<tr>
+	<td>click</td>
+	<td>css=button.dropdown</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Profile</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>css=select#u-field-select-account_privacy[disabled=&quot;&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=u-field-select-account_privacy</td>
+	<td>label=Limited Profile</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=span.profile-private--message</td>
+	<td>You are currently sharing a limited profile.</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=u-field-select-account_privacy</td>
+	<td>label=Full Profile</td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>id=u-field-title-bio</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=span.u-field-value-readonly:contains(&quot;Add Country&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=span.u-field-value-readonly:contains(&quot;Add language&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=input.upload-button-input[name=&quot;file&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=#u-field-title-bio</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

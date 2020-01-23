@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>New Test</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/courses/StanfordOnline/OpenEdX/Demo/info</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Course</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Videos</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=a#videos-parent:contains('Videos')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a:contains(&quot;Download Options&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=tab_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=#tab_0:contains('Video download')</td>
+	<td></td>
+</tr>
+<!--Checking next that the video icon is displaying in the nav bar-->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=a#tab_0.seq_video.progress-0.active</td>
+	<td></td>
+</tr>
+<!--Checking other basic qualities-->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.video-player-pre</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=section.video-player</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.video-player-post</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=button.video_control.play</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.video_control.play</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=button.video_control.pause</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.video_control.pause</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=button.video_control.play</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.video_control.play</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.vidtime</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.vidtime</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.speeds.menu-container</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=.speed-button:contains('1.0')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseOver</td>
+	<td>css=button.control.speed-button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=li &gt; button.control.speed-option:contains('1.25x')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseOver</td>
+	<td>css=button.control.speed-button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=li &gt; button.control.speed-option:contains('1.0x')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=.volume</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=button.control.add-fullscreen</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.control.add-fullscreen</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=article.video-wrapper</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.control:nth-child(4) &gt; span.icon-fallback-img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=transcript-captions</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=.toggle-transcript</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=.toggle-transcript</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=li.spacing</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//ol[@id='transcript-captions']/li[45]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//ol[@id='transcript-captions']/li[45]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='video_i4x-StanfordOnline-OpenEdX-video-Example_video_with_download_options']/div[2]/article/section[2]/div/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Download video</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>900</td>
+	<td></td>
+</tr>
+<!--Click "Cancel" or "OK" on file download pop-up window-->
+<tr>
+	<td>click</td>
+	<td>link=Download transcript</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>900</td>
+	<td></td>
+</tr>
+<!--Click "Cancel" or "OK" on file download pop-up window-->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=SubRip (.srt) file</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Text (.txt) file</td>
+	<td></td>
+</tr>
+<!--Switching to view translated captions-->
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a:contains(&quot;Translated Captions&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=#transcript-captions</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=.toggle-transcript</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=.toggle-transcript</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseOver</td>
+	<td>css=button.control.language-menu</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=li:contains('English')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=li:contains('English')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//ol[@id='transcript-captions']/li[2]</td>
+	<td>In this section, we're going to provide you with an overview</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=li:contains('Spanish')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.control.control-lang:contains('Spanish')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>800</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//ol[@id='transcript-captions']/li[2]</td>
+	<td>En esta sección le mostraremos un panorama general</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.control.control-lang</td>
+	<td></td>
+</tr>
+<!--Switching to view start/stop time feature-->
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a:contains(&quot;Video using start&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=tab_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=tab_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=#tab_1 &gt; p:nth-child(3):contains('Video Part 1')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.video_control.play</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.vidtime:contains('/ 0:10')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=li:contains('together these courses.')</td>
+	<td>together these courses.</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=tab_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=#tab_2 &gt; p:nth-child(3):contains('Video Part 2')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.video_control.play</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyNotText</td>
+	<td>css=div.vidtime</td>
+	<td>exact:0:00 / 0:10</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>300</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.vidtime:contains('/ 0:20')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyNotText</td>
+	<td>css=li:contains('together these courses.')</td>
+	<td>together these courses.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=li:contains('So before we start learning about the subjects that')</td>
+	<td>So before we start learning about the subjects that</td>
+</tr>
+</tbody></table>
+</body>
+</html>

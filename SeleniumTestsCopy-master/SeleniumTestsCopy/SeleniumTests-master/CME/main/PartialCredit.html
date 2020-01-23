@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>PartialCredit</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">PartialCredit</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/courses/StanfordOnline/OpenEdX/Demo/info</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Course</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Partial Credit Questions</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a:contains('Partial Credit Questions in Python')</td>
+	<td></td>
+</tr>
+<!--check that partial credit works with checkbox questions-->
+<tr>
+	<td>click</td>
+	<td>id=tab_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=fieldset[role=checkboxgroup]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.problem p</td>
+	<td>What colors are bananas?</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.problem-progress</td>
+	<td>(1 point possible)</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=fieldset &gt; label</td>
+	<td>1st</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${1st}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input[value=choice_0]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.check.Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.problem-progress</td>
+	<td>(0.75/1 point)</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=fieldset &gt; label:nth-child(2)</td>
+	<td>2nd</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${2nd}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=fieldset &gt; label:nth-child(2)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.check.Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.problem-progress</td>
+	<td>(0.1/1 point)</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=fieldset &gt; label:nth-child(3)</td>
+	<td>3rd</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${3rd}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=fieldset &gt; label:nth-child(3)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=fieldset &gt; label:nth-child(2)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.check.Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.problem-progress</td>
+	<td>(1/1 point)</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.vert.vert-1 a:contains('Staff Debug Info')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'Delete Student State')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=.success:contains('deleted student state')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=lean_overlay</td>
+	<td></td>
+</tr>
+<!--check that partial credit works with multiple choice questions-->
+<tr>
+	<td>click</td>
+	<td>id=tab_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=fieldset[role=radiogroup]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.problem p:nth-child(2)</td>
+	<td>What Apple device competed with the portable CD player?</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.problem-progress</td>
+	<td>(10 points possible)</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=fieldset &gt; label</td>
+	<td>1st_mc</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${1st+mc}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input[value=choice_0]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.check.Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.problem-progress</td>
+	<td>(5/10 points)</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=fieldset &gt; label:nth-child(2)</td>
+	<td>2nd_mc</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${2nd_mc}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=fieldset &gt; label:nth-child(2)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.check.Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.problem-progress</td>
+	<td>(1/10 points)</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=fieldset &gt; label:nth-child(3)</td>
+	<td>3rd_mc</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${3rd_mc}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=fieldset &gt; label:nth-child(3)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.check.Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.problem-progress</td>
+	<td>(10/10 points)</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.vert.vert-0 a:contains('Staff Debug Info')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'Delete Student State')])[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=.success:contains('deleted student state')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=lean_overlay</td>
+	<td></td>
+</tr>
+<!--check that partial credit works with text input questions-->
+<tr>
+	<td>click</td>
+	<td>id=tab_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=.problem input[type=text]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.problem p:contains('What is the meter for the following piece?')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.problem-progress</td>
+	<td>(10 points possible)</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=.problem input[type=text]</td>
+	<td>tetrameter</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.check.Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.problem-progress</td>
+	<td>(1/10 points)</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=.problem input[type=text]</td>
+	<td>hexameter</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.check.Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.problem-progress</td>
+	<td>(3/10 points)</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=.problem input[type=text]</td>
+	<td>iambic pentameter</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.check.Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.problem-progress</td>
+	<td>(10/10 points)</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.vert.vert-0 a:contains('Staff Debug Info')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'Delete Student State')])[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=.success:contains('deleted student state')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=lean_overlay</td>
+	<td></td>
+</tr>
+<!--check that partial credit works with numeric input questions-->
+<tr>
+	<td>click</td>
+	<td>id=tab_3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=.problem input[type=text]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.problem p:contains('how many miles away will the nearest star be?')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.problem-progress</td>
+	<td>(1 point possible)</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=.problem input[type=text]</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.check.Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.problem-progress</td>
+	<td>(0.2/1 point)</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=.problem input[type=text]</td>
+	<td>100</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.check.Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.problem-progress</td>
+	<td>(0.5/1 point)</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=.problem input[type=text]</td>
+	<td>514</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.check.Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.problem-progress</td>
+	<td>(1/1 point)</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.vert.vert-0 a:contains('Staff Debug Info')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'Delete Student State')])[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=.success:contains('deleted student state')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=lean_overlay</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refresh</td>
+	<td></td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

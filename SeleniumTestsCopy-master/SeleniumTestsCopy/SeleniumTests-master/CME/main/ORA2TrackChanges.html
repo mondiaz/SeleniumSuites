@@ -1,0 +1,740 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>TrackChanges</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">TrackChanges</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/courses/StanfordOnline/OpenEdX/Demo/courseware</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Peer Assessment / ORA</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a:contains('Peer Assessment with Track Changes')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=article[class=&quot;submission__answer__part__prompt ui-toggle-visibility&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>highlight</td>
+	<td>css=article[class=&quot;submission__answer__part__prompt ui-toggle-visibility&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectAndWait</td>
+	<td>id=action-preview-select</td>
+	<td>label=Student</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=h2.step__title</td>
+	<td></td>
+</tr>
+<tr>
+	<td>highlight</td>
+	<td>css=h2.step__title</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=span.date</td>
+	<td></td>
+</tr>
+<tr>
+	<td>highlight</td>
+	<td>css=span.date</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=span.step__status__value</td>
+	<td></td>
+</tr>
+<tr>
+	<td>highlight</td>
+	<td>css=span.step__status__value</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=submission__answer__part__text__1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>highlight</td>
+	<td>id=submission__answer__part__text__1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=submission__answer__part__text__1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=li.list--actions__item</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=#submission__save.action.action--save.submission__save.is--disabled</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=li.list--actions__item</td>
+	<td>Save Your ProgressYour Submission Status: This response has not been saved.</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=#step--response__submit.action.action--submit.step--response__submit.is--disabled</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.step__actions &gt; ul.list.list--actions &gt; li.list--actions__item</td>
+	<td>Submit your response and move to the next step</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>submission__answer__part__text__1</td>
+	<td>something</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=#step--response__submit.action.action--submit.step--response__submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#step--response__submit &gt; span.copy</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=span.copy</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeConfirmation</td>
+	<td>confirm-submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${confirm-submit}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span.copy</td>
+	<td>Complete</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=#openassessment__peer-assessment &gt; header.step__header.ui-toggle-visibility__control &gt; span.step__status &gt; span.step__status__value &gt; span.copy</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=track_changes_clear_button_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=h3.peer-assessment__display__title</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=track-changes-content_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.peer-assessment__display</td>
+	<td></td>
+</tr>
+<!--No Confirmation is visible, but on Prod there is consistenly a hidden confirmation.-->
+<!--verifyConfirmation handles this hidden element. This doesn't appear in Stage. -->
+<!--Ok if it fails here as long as test continues to run.-->
+<tr>
+	<td>pause</td>
+	<td>800</td>
+	<td></td>
+</tr>
+<tr>
+	<td>isConfirmationPresent</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseDown</td>
+	<td>css=#track-changes-content_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseUp</td>
+	<td>css=#track-changes-content_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=#track-changes-content_0</td>
+	<td>${KEY_CTRL}A</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=#track-changes-content_0</td>
+	<td>${KEY_DELETE}</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=#track-changes-content_0</td>
+	<td>${KEY_SPACE}</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=span.del.cts-1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=span.ins.cts-1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=track_changes_clear_button_0</td>
+	<td></td>
+</tr>
+<!--No Confirmation is visible, but logs displayed an "Unexpected Confirmation!" message. -->
+<!--Next step handles this hidden element.-->
+<tr>
+	<td>storeConfirmation</td>
+	<td>confirm-clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${confirm-clear}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=span.ui-toggle-visibility__control__copy.question__title__copy</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.ui-toggle-visibility__control__copy.question__title__copy</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=assessment__rubric__question--0__1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=assessment__rubric__question--0__feedback</td>
+	<td>i made some changes</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=assessment__rubric__question--1__2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=assessment__rubric__question--feedback__value</td>
+	<td>apply my changes.</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=#openassessment__grade &gt; header.step__header.ui-toggle-visibility__control &gt; h2.step__title &gt; span.wrapper--copy &gt; span.step__label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#openassessment__grade &gt; header.step__header.ui-toggle-visibility__control &gt; h2.step__title &gt; span.wrapper--copy &gt; span.step__label</td>
+	<td>Your Grade:</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=span.grade__value__title</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span.grade__value__title</td>
+	<td>Not Completed</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=peer-assessment--001__assessment__submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=peer-assessment--001__assessment__submit</td>
+	<td>Submit your assessment &amp; move onto next step</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=peer-assessment--001__assessment__submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=#openassessment__peer-assessment &gt; header.step__header.ui-toggle-visibility__control &gt; span.step__status &gt; span.step__status__value &gt; span.copy</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=span.grade__value__title</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=span.grade__value__title</td>
+	<td>Waiting for Assessments</td>
+</tr>
+<tr>
+	<td>focus</td>
+	<td>css=a.user-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.dropdown</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Sign Out</td>
+	<td></td>
+</tr>
+<!--Switching to second user to create second assessment and complete track changes test.-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Sign in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=email</td>
+	<td>selenium-tester2@openedx.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=password</td>
+	<td>removedforsecurityreasons</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=.login-button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=View Course Demo Course</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Course</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Peer Assessment / ORA</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a:contains('Peer Assessment with Track Changes')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=submission__answer__part__text__1</td>
+	<td>testing 123</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#step--response__submit &gt; span.copy</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=#accessibile-confirm-modal</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=#accessibile-confirm-modal .ok-button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeConfirmation</td>
+	<td>confirm-submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${confirm-submit}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=track-changes-content_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=#track-changes-content_0 &gt; p</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseDown</td>
+	<td>css=#track-changes-content_0 &gt; p</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseUp</td>
+	<td>css=#track-changes-content_0 &gt; p</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=track-changes-content_0</td>
+	<td>${KEY_DELETE}</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=track-changes-content_0</td>
+	<td>${KEY_CTRL}A</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=track-changes-content_0</td>
+	<td>${KEY_SPACE}</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=span.del.cts-1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=span.ins.cts-1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=assessment__rubric__question--0__1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='assessment__rubric__question--0']/div/ol/li[2]/div/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=assessment__rubric__question--1__0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#assessment__rubric__question--1 &gt; div.ui-toggle-visibility__content &gt; ol.question__answers &gt; li.answer &gt; div.wrapper--input &gt; label.answer__label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=peer-assessment--001__assessment__submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.dropdown</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Sign Out</td>
+	<td></td>
+</tr>
+<!--Switching back to first user-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Sign in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=email</td>
+	<td>selenium-tester@openedx.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=password</td>
+	<td>removedforsecurityreasons</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=.login-button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a[href=&quot;/courses/StanfordOnline/OpenEdX/Demo/info&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Course</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Peer Assessment / ORA</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a:contains('Peer Assessment with Track Changes')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifySelectedLabel</td>
+	<td>css=#action-preview-select</td>
+	<td>Staff</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=button.button-staff-tools</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=button.button-staff-tools</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.button-staff-tools</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=label.label</td>
+	<td>Enter an individual learner's username or email</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=openassessment__student_username</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=openassessment__student_username</td>
+	<td>stest</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#submit_student_username &gt; span.copy</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.ui-staff_close_button</td>
+	<td></td>
+</tr>
+<!--Overriding a grade in ORA2-->
+<tr>
+	<td>click</td>
+	<td>css=button.ui-staff__button.button-staff-tools</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=label.label</td>
+	<td>Enter an individual learner's username or email</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=openassessment__student_username</td>
+	<td>stest3</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#submit_student_username &gt; span.copy</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.staff-info__status.ui-staff__content__section &gt; h2.title</td>
+	<td>Scores</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=openassessment_points_earned</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#openassessment_override_score_form &gt; label.label</td>
+	<td>Override Peer Score - set to</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=openassessment_override_score</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=submit_override_score</td>
+	<td></td>
+</tr>
+<tr>
+	<td>highlight</td>
+	<td>id=openassessment_points_override</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=openassessment_points_override</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=openassessment_override_score</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=submit_override_score</td>
+	<td></td>
+</tr>
+<!--Deleting a student state through Instructor tab-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Instructor</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Student Admin</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=student-select-grade</td>
+	<td>stest</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=problem-select-single</td>
+	<td>i4x://StanfordOnline/OpenEdX/openassessment/3d3f898820d2409b855cd28ffdc11a93 </td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>name=delete-state-single</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=delete-state-single</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForConfirmationPresent</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeConfirmation</td>
+	<td>confirm-delete</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForAlertPresent</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeAlert</td>
+	<td>confirm-alert</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=student-select-grade</td>
+	<td>stest2</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=problem-select-single</td>
+	<td>i4x://StanfordOnline/OpenEdX/openassessment/3d3f898820d2409b855cd28ffdc11a93</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=delete-state-single</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForConfirmationPresent</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeConfirmation</td>
+	<td>confirm-delete</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForAlertPresent</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeAlert</td>
+	<td>confirm-alert</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Course</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a:contains('Peer Assessment with Track Changes')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>id=submission__answer__part__text__1</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

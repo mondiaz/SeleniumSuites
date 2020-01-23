@@ -1,0 +1,213 @@
+@@ -0,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>Data Downloads</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/courses/StanfordOnline/OpenEdX/Demo/instructor</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Data Download</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=dump-gradeconf</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=list-anon-ids</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>800</td>
+	<td></td>
+</tr>
+<!--Click "OK" or "Cancel" to close the file download prompt.-->
+<tr>
+	<td>click</td>
+	<td>name=list-profiles-csv</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=report-request-response</td>
+	<td>The enrolled learner profile report is being created. To view the status of the report, see Pending Instructor Tasks below.</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>name=list-profiles</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=calculate-grades-csv</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=report-request-response</td>
+	<td>The grade report is being created. To view the status of the report, see Pending Instructor Tasks below.</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=get-student-responses</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=report-request-response</td>
+	<td>Your student responses report is being generated! You can view the status of the generation task in the 'Pending Instructor Tasks' section.</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=h2:contains('Pending Tasks ')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=#data_download &gt; div.running-tasks-container.action-type-container &gt; div.running-tasks-section</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=list-profiles</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=data-student-profiles-table</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>900</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var d=new Date(); d.getFullYear()+'-'+((d.getMonth()+1))+'-'+d.getDate();</td>
+	<td>date2</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${date2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Data Download</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=ora2-response-btn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=report-request-response</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=report-request-response</td>
+	<td>The ORA2 responses report is being generated.</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=ora2-response-btn-email</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=report-request-response</td>
+	<td>The ORA2 responses report is being generated.</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=course-forums-btn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=report-request-response</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=student-forums-btn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=report-request-response</td>
+	<td>The student forums usage report is being generated.</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>900</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=#report-downloads-table</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=a:contains('ORA2_responses_including_email'),a:contains('${date2}')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=a:contains('StanfordOnline_OpenEdX_Demo_course_forums')('${date2}')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Graph This</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Graph This</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='report-downloads-table']/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=a:contains('StanfordOnline_OpenEdX_Demo_student_forums')('${date2}')</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

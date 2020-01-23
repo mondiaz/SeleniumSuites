@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>New Test</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/courses/course-v1:TESTTEST+EntranceExam+TESTTEST/about</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Enroll in EntranceExam</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertLocation</td>
+	<td>glob:*lagunita.stanford.edu/dashboard</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a.enter-course[data-course-key=&quot;course-v1:TESTTEST+EntranceExam+TESTTEST&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>css=ol.course-tabs li a:contains('Course')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>css=ol.course-tabs li a:contains('Home')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span.group-heading.active</td>
+	<td>Entrance Exam</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=p.sequential-status-message</td>
+	<td>To access course materials, you must score 50% or higher on this exam. Your current score is 0%.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.problem legend</td>
+	<td>If you select the right answer, you will pass this entrance exam and will be able to see the rest of the course content.</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input[value=choice_0]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button[data-value=&quot;Submit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=label.choicegroup_incorrect</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>link=Questions!</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>link=Videos!</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input[value=choice_1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button[data-value=&quot;Submit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=label.choicegroup_correct</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=p.sequential-status-message</td>
+	<td>Your score is 100%. You have passed the entrance exam.</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=ol.course-tabs li a:contains('Course')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=ol.course-tabs li a:contains('Home')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Questions!</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Videos!</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

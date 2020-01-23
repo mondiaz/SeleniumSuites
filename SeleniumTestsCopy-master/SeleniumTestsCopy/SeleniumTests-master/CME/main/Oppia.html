@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>Oppia</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Oppia</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/courses/StanfordOnline/OpenEdX/Demo/courseware</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Ungraded Features and Experiments</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a:contains('Oppia')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=.oppia-toast-container</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=.conversation-skin-tutor-card:contains('Let's speak some Spanish!')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>css=.oppia_block iframe</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@type='text']</td>
+	<td>Hola</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.btn.btn-default:contains('Submit')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=span.oppia-progress-dot.oppia-progress-dot-active[tooltip=&quot;Card #2&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>css=.conversation-skin-tutor-card:contains('Let's speak some Spanish!')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=.conversation-skin-tutor-card:contains('Cómo te llamas?')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@type='text']</td>
+	<td>Stest</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.btn.btn-default:contains('Submit')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=span.oppia-progress-dot.oppia-progress-dot-active[tooltip=&quot;Card #3&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>css=.conversation-skin-tutor-card:contains('Cómo te llamas?')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=.conversation-skin-tutor-card:contains('What do you think &quot;Me llamo&quot; means?')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@type='text']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.btn.btn-default:contains('Submit')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>css=span.oppia-progress-dot.oppia-progress-dot-active[tooltip=&quot;Card #4&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@type='text']</td>
+	<td>I don't know. </td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.btn.btn-default:contains('Submit')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=oppia-response-text-input</td>
+	<td>I don't know.</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=.conversation-skin-oppia-feedback-content:contains('Me llamo means')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=button:contains('Continue')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button:contains('Continue')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=span.oppia-progress-dot.oppia-progress-dot-active[tooltip=&quot;Card #4&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>css=.conversation-skin-tutor-card:contains('What do you think &quot;Me llamo&quot; means?')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@type='text']</td>
+	<td>What is your name?</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.btn.btn-default:contains('Submit')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=oppia-response-text-input</td>
+	<td>What is your name?</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=.conversation-skin-oppia-feedback-content:contains('again...Introduce yourself.')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=button:contains('Continue')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button:contains('Continue')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=.conversation-skin-tutor-card:contains('Cómo te llamas?')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@type='text']</td>
+	<td>Me llamo Stest.</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.btn.btn-default:contains('Submit')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>800</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>css=.conversation-skin-tutor-card:contains('Cómo te llamas?')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=.conversation-skin-tutor-card:contains('Qué podemos comprar')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=oppia-interactive-multiple-choice-input</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

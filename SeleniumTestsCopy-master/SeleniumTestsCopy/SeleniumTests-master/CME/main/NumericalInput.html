@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>New Test</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+<!--checks that additional correct and incorrect answers are supported via s= markdown-->
+<tr>
+	<td>open</td>
+	<td>/courses/StanfordOnline/OpenEdX/Demo/courseware</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a:contains('Basic Questions with Hints and Feedback')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=.chapter-menu.is-open a p:contains('Numerical Input Problems')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=tab_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=.vert.vert-3 h3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=.vert.vert-3 h3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=.vert.vert-3 h3</td>
+	<td>Additional Answers with Feedback for Incorrect Answers</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=.vert.vert-3 div p:contains('What are other ways in which two-thirds can be expressed? ')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=.vert.vert-3 .problem input[type=text]</td>
+	<td>.666</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=.vert.vert-3 button.check.Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>css=.vert.vert-3 div[class=&quot;correct &quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.hint-text:contains('.667 and 2/3 would also be acceptable')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=.vert.vert-3 .problem input[type=text]</td>
+	<td>.667</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=.vert.vert-3 button.check.Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>css=.vert.vert-3 div[class=&quot;correct &quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.hint-text:contains('.666 and 2/3 would also be acceptable')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=.vert.vert-3 .problem input[type=text]</td>
+	<td>3/2</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=.vert.vert-3 button.check.Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>css=.vert.vert-3 div[class=&quot;incorrect &quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.hint-text:contains('Just flip the numbers and then you've got it right.')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=.vert.vert-3 .problem input[type=text]</td>
+	<td>.665</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=.vert.vert-3 button.check.Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>css=.vert.vert-3 div[class=&quot;incorrect &quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=.vert.vert-3 .hint-text:contains('Close but not quite')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=.vert.vert-3 a:contains('Staff Debug Info')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'Delete Student State')])[4]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=.success:contains('deleted student state')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=pre:contains('s=2/3')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=pre:contains('or=.666')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=pre:contains('not=.665')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=lean_overlay</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

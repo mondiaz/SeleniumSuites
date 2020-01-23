@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>New Test</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+<!--Checks poll xblock works-->
+<tr>
+	<td>open</td>
+	<td>/courses/StanfordOnline/OpenEdX/Demo/courseware</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Polls and Surveys</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Polls in Studio</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=tab_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=li.poll-result</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.percentage-gauge</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=.poll-percent-display</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.poll-block-form-wrapper &gt; h3.poll-header</td>
+	<td>Poll with unlimited attempts</td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=li.poll-answer input:nth-child(1)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=li.poll-answer:nth-child(2) input:nth-child(1)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=form &gt; input[name=&quot;poll-submit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.view-results-button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.poll-footnote:contains('Results gathered')</td>
+	<td></td>
+</tr>
+<!--Checks survey xblock works-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Surveys in Studio</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=td.survey-question</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=td.survey-option</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=button.view-results-button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=enjoy</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=.survey-row:nth-child(2) .survey-option:nth-child(3) input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=.survey-row:nth-child(3) .survey-option:nth-child(3) input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=.survey-row:nth-child(4) .survey-option:nth-child(4) input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.view-results-button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.poll-footnote:contains('Results gathered')</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

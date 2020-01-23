@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>CSVProblemResponses</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">CSVProblemResponses</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/courses/course-v1:Testing+Testing123+Evergreen/courseware</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Section One - Released</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=.menu-item.graded a p:contains('1.1') </td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=tab_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=.vert.vert-5 fieldset[role=radiogroup]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=.vert.vert-5 h3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=.vert.vert-5 div.problem p:nth-child(4)</td>
+	<td>Which of the following countries has the largest population?</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=.vert.vert-5 div.problem fieldset &gt; label:nth-child(3)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=.vert.vert-5 button.check.Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=.vert.vert-5 .wrap-instructor-info a:contains('Staff Debug Info')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=.vert.vert-5 .staff_info</td>
+	<td>StaffInfoContent</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${StaffInfoContent}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>1</td>
+	<td>delimiter</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{storedVars['StaffInfoContent'].split('n = ')[storedVars['delimiter']]}</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${test}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>0</td>
+	<td>delimiter1</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{storedVars['test'].split(' M')[storedVars['delimiter1']]}</td>
+	<td>ProblemLocationID</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${ProblemLocationID}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=lean_overlay</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Instructor</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Data Download</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>xpath=(//p[contains(text(),'CSV file that lists all student answers to a given problem')])</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input[name|=&quot;problem-location&quot;]</td>
+	<td>${ProblemLocationID}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input[value|=&quot;Download a CSV of problem responses&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=#report-request-response:contains('The problem responses report is being created.')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>900</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var d=new Date(); d.getFullYear()+'-'+((d.getMonth()+1))+'-'+d.getDate();</td>
+	<td>date2</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${date2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=#report-downloads-table</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=a:contains('student_state_from_block'),a:contains('${date2}')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a:contains('student_state_from_block'),a:contains('${date2}')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Delete</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForConfirmationPresent</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeConfirmation</td>
+	<td>confirm-delete</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/courses/course-v1:Testing+Testing123+Evergreen/courseware</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Section One - Released</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=.menu-item.graded a p:contains('1.1') </td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=tab_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=.vert.vert-5 .wrap-instructor-info a:contains('Staff Debug Info')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'Delete Student State')])[6]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=.success:contains('deleted student state')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=lean_overlay</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

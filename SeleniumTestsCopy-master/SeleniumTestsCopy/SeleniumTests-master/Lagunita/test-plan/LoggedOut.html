@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>LoggedOut</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+<!--In a private browser window and at medium speed:-->
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Sign in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertLocation</td>
+	<td>glob:*lagunita.stanford.edu/login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=img[alt=&quot;Stanford Lagunita Home Page&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertLocation</td>
+	<td>glob:*lagunita.stanford.edu/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=About</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertLocation</td>
+	<td>glob:*lagunita.stanford.edu/about</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Contact</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>css=article &gt; h2</td>
+	<td>Platform Help Center and Contact Emails</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a.about</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>css=article &gt; h2</td>
+	<td>About Lagunita</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=img[alt=&quot;Stanford Lagunita Home Page&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=img[alt*=&quot;Adventures in Writing PWR&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertLocation</td>
+	<td>glob:*lagunita.stanford.edu/courses/VPUE/PWR/AdventuresinWriting/about</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=img[alt=&quot;Stanford Online Lagunita&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertLocation</td>
+	<td>glob:*lagunita.stanford.edu/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a[href=&quot;/tos&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertLocation</td>
+	<td>glob:*lagunita.stanford.edu/tos</td>
+	<td></td>
+</tr>
+<tr>
+	<td>goBackAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a[href=&quot;/privacy&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertLocation</td>
+	<td>glob:*lagunita.stanford.edu/privacy</td>
+	<td></td>
+</tr>
+<tr>
+	<td>goBackAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a[href=&quot;/honor&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertLocation</td>
+	<td>glob:*lagunita.stanford.edu/honor</td>
+	<td></td>
+</tr>
+<tr>
+	<td>goBackAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a[href=&quot;/copyright&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertLocation</td>
+	<td>glob:*lagunita.stanford.edu/copyright</td>
+	<td></td>
+</tr>
+<tr>
+	<td>goBackAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Contact</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertLocation</td>
+	<td>glob:*lagunita.stanford.edu/contact</td>
+	<td></td>
+</tr>
+<tr>
+	<td>goBackAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=nav li a:contains(&quot;Help&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyLocation</td>
+	<td>https://stanfordonline.zendesk.com/hc/en-us</td>
+	<td></td>
+</tr>
+<tr>
+	<td>goBackAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=stanford-footer-edx-image</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyLocation</td>
+	<td>https://open.edx.org/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>goBackAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Support</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>css=section#help-modal</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>css=a.help-modal-button:contains(&quot;Access the Help Center&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>css=ul.help-buttons li a:contains(&quot;How to register an account&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>css=ul.help-buttons li a:contains(&quot;How to reset a password&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>css=ul.help-buttons li a:contains(&quot;How to enroll in a course&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a.help-modal-button:contains(&quot;Access the Help Center&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>title=Stanford Online</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForLocation</td>
+	<td>https://stanfordonline.zendesk.com/hc/en-us</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyLocation</td>
+	<td>https://stanfordonline.zendesk.com/hc/en-us</td>
+	<td></td>
+</tr>
+<tr>
+	<td>close</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=ul.help-buttons li a:contains(&quot;How to register an account&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>title=How do I create an account? – Stanford Online</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyLocation</td>
+	<td>https://stanfordonline.zendesk.com/hc/en-us/articles/202275024-How-do-I-create-an-account-</td>
+	<td></td>
+</tr>
+<tr>
+	<td>close</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=ul.help-buttons li a:contains(&quot;How to reset a password&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>title=How do I reset my password? – Stanford Online</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyLocation</td>
+	<td>https://stanfordonline.zendesk.com/hc/en-us/articles/201864484-How-do-I-reset-my-password-</td>
+	<td></td>
+</tr>
+<tr>
+	<td>close</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=ul.help-buttons li a:contains(&quot;How to enroll in a course&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>title=How do I enroll in a course? – Stanford Online</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyLocation</td>
+	<td>https://stanfordonline.zendesk.com/hc/en-us/articles/203009244-How-do-I-enroll-in-a-course-</td>
+	<td></td>
+</tr>
+<tr>
+	<td>close</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.close-modal</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/courses</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertLocation</td>
+	<td>glob:*lagunita.stanford.edu/courses</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=img[alt*=&quot;Creating Effective Online and Blended Courses&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>link=exact:Support</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=exact:Support</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>css=a.help-modal-button:contains(&quot;Access the Help Center&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>css=a#feedback_link_question:contains(&quot;by clicking here&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Access the Help Center</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>title=Stanford Online</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyNotVisible</td>
+	<td>css=a:contains(&quot;Course Author Documentation&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>close</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=by clicking here</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>css=header h2:contains(&quot;Ask a Question&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>css=input#feedback_form_name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>css=input#feedback_form_email</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>css=input#feedback_form_subject</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>css=textarea#feedback_form_details</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>css=input#feedback_submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=feedback_form_name</td>
+	<td>asdf</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=feedback_form_email</td>
+	<td>asdf@example.org</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=feedback_form_subject</td>
+	<td>asdf</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=feedback_form_details</td>
+	<td>asdf</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=feedback_submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>css=header h2:contains(&quot;Thank You!&quot;)</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

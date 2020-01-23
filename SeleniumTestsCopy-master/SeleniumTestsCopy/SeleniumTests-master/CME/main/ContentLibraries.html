@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>New Test</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+<!--checks that a randomized content block displays different problems to different users from the same library content block-->
+<tr>
+	<td>open</td>
+	<td>/courses/course-v1:StanfordOnline+OpenEdX+Demos/courseware</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=div.chapter-menu.is-open &gt; div.menu-item a:contains('Randomized Quiz')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.vert.vert-1 h3.problem-header</td>
+	<td></td>
+</tr>
+<!--checks that a problem block and content block are present to first user-->
+<tr>
+	<td>click</td>
+	<td>css=div.vert.vert-1 a:contains('Staff Debug Info')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.staff_info:contains('@problem+block')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=lean_overlay</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=f194c3a2223247f6b39907b73645ba5a_trig</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>css=#f194c3a2223247f6b39907b73645ba5a_debug &gt; div.inner-wrapper &gt; div.staff_info:contains('@problem+block')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=#f194c3a2223247f6b39907b73645ba5a_debug &gt; div.inner-wrapper &gt; div.staff_info:contains('@library_content+block')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=f194c3a2223247f6b39907b73645ba5a_trig</td>
+	<td>ContentBlock1</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${ContentBlock1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=lean_overlay</td>
+	<td></td>
+</tr>
+<!--gets full problem text for first user then extracts first bit of it-->
+<tr>
+	<td>storeText</td>
+	<td>css=div.problem</td>
+	<td>ProblemText</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${ProblemText}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>0</td>
+	<td>delimiter</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{storedVars['ProblemText'].split('- ')[storedVars['delimiter']]}</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>0</td>
+	<td>delimiter1</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{storedVars['test'].split('-')[storedVars['delimiter1']]}</td>
+	<td>PartialProblemTextString</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${PartialProblemTextString}</td>
+	<td></td>
+</tr>
+<!--switches to view as specific student-->
+<tr>
+	<td>select</td>
+	<td>id=action-preview-select</td>
+	<td>label=Specific student</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=action-preview-username</td>
+	<td>stest2</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.preview-specific-student-notice &gt; p</td>
+	<td>You are now viewing the course as stest2.</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.vert.vert-1 h3.problem-header</td>
+	<td></td>
+</tr>
+<!--gets full problem text for second user then extracts first bit of it-->
+<tr>
+	<td>storeText</td>
+	<td>css=div.problem</td>
+	<td>ProblemText2</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${ProblemText2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>0</td>
+	<td>delimiter</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{storedVars['ProblemText2'].split('- ')[storedVars['delimiter']]}</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>0</td>
+	<td>delimiter1</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{storedVars['test'].split('-')[storedVars['delimiter1']]}</td>
+	<td>PartialProblemTextString2</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${PartialProblemTextString2}</td>
+	<td></td>
+</tr>
+<!--checks that the first user's starting snippet of problem text differs from the second user's-->
+<tr>
+	<td>verifyEval</td>
+	<td>storedVars['PartialProblemTextString']==storedVars['PartialProblemTextString2']</td>
+	<td>false</td>
+</tr>
+<!--checks that a problem block and content block are present to second user-->
+<tr>
+	<td>click</td>
+	<td>css=div.vert.vert-1 a:contains('Staff Debug Info')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.staff_info:contains('@problem+block')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=lean_overlay</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=f194c3a2223247f6b39907b73645ba5a_trig</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=f194c3a2223247f6b39907b73645ba5a_trig</td>
+	<td>ContentBlock2</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${ContentBlock2}</td>
+	<td></td>
+</tr>
+<!--checks that both users are seeing problems from the same content library-->
+<tr>
+	<td>verifyEval</td>
+	<td>storedVars['ContentBlock1']==storedVars['ContentBlock2']</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>css=#f194c3a2223247f6b39907b73645ba5a_debug &gt; div.inner-wrapper &gt; div.staff_info:contains('@problem+block')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=#f194c3a2223247f6b39907b73645ba5a_debug &gt; div.inner-wrapper &gt; div.staff_info:contains('@library_content+block')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=lean_overlay</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectAndWait</td>
+	<td>id=action-preview-select</td>
+	<td>label=Staff</td>
+</tr>
+</tbody></table>
+</body>
+</html>

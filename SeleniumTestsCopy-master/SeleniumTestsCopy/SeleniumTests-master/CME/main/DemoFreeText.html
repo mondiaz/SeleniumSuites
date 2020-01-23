@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>DemoFreeText</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+<tr>
+	<td>click</td>
+	<td>link=Custom Questions</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a[href*=&quot;free_text_response/&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=tab_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>800</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div#&quot;problem_i4x-StanfordOnline-OpenEdX-problem-Open_Response_No_Limitation_on_Submission&quot; div.problem div.action button[class=&quot;check Submit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>css=div[class=&quot;incorrect &quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=textarea[id|=&quot;input_i4x&quot;]</td>
+	<td>asdf</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div#&quot;problem_i4x-StanfordOnline-OpenEdX-problem-Open_Response_No_Limitation_on_Submission&quot; div.problem div.action button[class=&quot;check Submit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>css=div[class=&quot;correct &quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a[id*=&quot;i4x_StanfordOnline_OpenEdX_problem&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'Delete Student State')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=idash_msg</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=lean_overlay</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=tab_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>800</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=input_i4x-StanfordOnline-OpenEdX-problem-OPEN_RESPONSE_MINIMUM_OF_10_WORDS_2_1</td>
+	<td>asdf</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#problem_i4x-StanfordOnline-OpenEdX-problem-OPEN_RESPONSE_MINIMUM_OF_10_WORDS &gt; div.problem &gt; div.action &gt; button.check.Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div[id=&quot;problem_i4x-StanfordOnline-OpenEdX-problem-OPEN_RESPONSE_MINIMUM_OF_10_WORDS&quot;] span.status</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div[id=&quot;status_i4x-StanfordOnline-OpenEdX-problem-OPEN_RESPONSE_MINIMUM_OF_10_WORDS_2_1&quot;][class=&quot;incorrect &quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=input_i4x-StanfordOnline-OpenEdX-problem-OPEN_RESPONSE_MINIMUM_OF_10_WORDS_2_1</td>
+	<td>asdf asdf asldkfhj alskdjfh alskfgjh lasfkjgh alskjh alsdkjh lskadjh laksjhg alskjgh lkasdgjh lkjagh asdf</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#problem_i4x-StanfordOnline-OpenEdX-problem-OPEN_RESPONSE_MINIMUM_OF_10_WORDS &gt; div.problem &gt; div.action &gt; button.check.Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div[id=&quot;status_i4x-StanfordOnline-OpenEdX-problem-OPEN_RESPONSE_MINIMUM_OF_10_WORDS_2_1&quot;][class=&quot;correct &quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=i4x_StanfordOnline_OpenEdX_problem_OPEN_RESPONSE_MINIMUM_OF_10_WORDS_trig</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'Delete Student State')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=lean_overlay</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

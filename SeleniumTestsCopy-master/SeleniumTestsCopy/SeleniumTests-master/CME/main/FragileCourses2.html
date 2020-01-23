@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>New Test</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+<!--test that checks if python grader in CS101 still works is omitted on CME-->
+<!--checks any answer is correct in Interactive Microbiology still works-->
+<tr>
+	<td>open</td>
+	<td>/courses/course-v1:Testing+Testing123+Evergreen/courseware/1ad6127becb74c0da561716348fb3abb/a45fca97b5f241c4b48e18784bf37a91/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=.vert.vert-0 h3:contains('Online Microscope')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.problem-progress</td>
+	<td>(1 point possible)</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.check.Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.problem-progress</td>
+	<td>(1 point possible)</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span.message</td>
+	<td>Please select at least one answer.</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input[value=choice_0]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.check.Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>css=.indicator-container span[class = &quot;status correct&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>css=.indicator-container span[class = &quot;status incorrect&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.problem-progress</td>
+	<td>(1/1 point)</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=.indicator-container span[class = &quot;status unanswered&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=.capa_alert</td>
+	<td>Selection(s) received.</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input[value=choice_1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.check.Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.problem-progress</td>
+	<td>(1/1 point)</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=.capa_alert</td>
+	<td>Selection(s) received.</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input[value=choice_2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.check.Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.problem-progress</td>
+	<td>(1/1 point)</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=.capa_alert</td>
+	<td>Selection(s) received.</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=.vert.vert-0 a:contains('Staff Debug Info')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'Delete Student State')])[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=.success:contains('deleted student state')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=lean_overlay</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--checks that numerous ajax-request components in ResGeo202 unit load-->
+<tr>
+	<td>open</td>
+	<td>/courses/course-v1:Testing+Testing123+Evergreen/courseware/1ad6127becb74c0da561716348fb3abb/48d2074a7ce142958536a2d79f0e535a/1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>{new Date()}</td>
+	<td>Cur_time</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${Cur_time}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=.vert.vert-1 section[class=&quot;inputtype formulaequationinput&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=.vert.vert-1 div span span[class=&quot;MathJax_SVG&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=.vert.vert-2 section[class=&quot;inputtype formulaequationinput&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=.vert.vert-2 div span span[class=&quot;MathJax_SVG&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=.vert.vert-5 section[class=&quot;inputtype formulaequationinput&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=.vert.vert-5 div span span[class=&quot;MathJax_SVG&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=.vert.vert-10 section[class=&quot;inputtype formulaequationinput&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=.vert.vert-10 section[class=&quot;inputtype formulaequationinput&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=.vert.vert-10 div span span[class=&quot;MathJax_SVG&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>highlight</td>
+	<td>css=.vert.vert-10 div span span[class=&quot;MathJax_SVG&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=.vert.vert-13 fieldset[role=radiogroup]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>{new Date()}</td>
+	<td>Cur_time2</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${Cur_time2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>{(storedVars[&quot;Cur_time2&quot;].getTime() - storedVars[&quot;Cur_time&quot;].getTime())/1000}</td>
+	<td>diff</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>time in seconds to load components: ${diff}</td>
+	<td></td>
+</tr>
+<!--checks that numerous MathJax elements in QMSE02 load, render properly-->
+<tr>
+	<td>click</td>
+	<td>id=tab_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>{new Date()}</td>
+	<td>2Cur_time</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${2Cur_time}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=.vert.vert-0 section[class=&quot;inputtype formulaequationinput&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=.vert.vert-0 div span span[class=&quot;MathJax_SVG&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=.vert.vert-7 fieldset[role=radiogroup]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=.vert.vert-8 fieldset[role=checkboxgroup]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=.vert.vert-10 .discussion-module</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>{new Date()}</td>
+	<td>2Cur_time2</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${2Cur_time2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>{(storedVars[&quot;2Cur_time2&quot;].getTime() - storedVars[&quot;2Cur_time&quot;].getTime())/1000}</td>
+	<td>diff</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=.vert.vert-1 div.MathJax_SVG_Display span[style*=&quot;display: inline-block&quot;] </td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=.vert.vert-1 div.MathJax_SVG_Display span[style*=&quot;display: inline-block&quot;] </td>
+	<td>E^z=i∑m=1∞(a^m†−a^m)ℏωmεoLsin⁡kmx=iπℏcεoL2∑m=1∞(a^m†−a^m)msin⁡mπxL</td>
+</tr>
+<tr>
+	<td>verifyNotText</td>
+	<td>css=.vert.vert-1 div.MathJax_SVG_Display span[style*=&quot;display: inline-block&quot;] </td>
+	<td>\[\begin{align}&nbsp;&nbsp;&nbsp;&amp;amp; {{{\hat{E}}}_{z}}=i\sum\limits_{m=1}^{\infty }{\left( \hat{a}_{m}^{\dagger }-{{{\hat{a}}}_{m}} \right)\sqrt{\frac{\hbar {{\omega }_{m}}}{{{\varepsilon }_{o}}L}}\sin {{k}_{m}}x} \&nbsp;&nbsp;&nbsp;&amp;amp; =i\sqrt{\frac{\pi \hbar c}{{{\varepsilon }_{o}}{{L}^{2}}}}\sum\limits_{m=1}^{\infty }{\left( \hat{a}_{m}^{\dagger }-{{{\hat{a}}}_{m}} \right)\sqrt{m}\sin \frac{m\pi x}{L}}&nbsp;&nbsp;&nbsp;\end{align}\] </td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=.vert.vert-1 fieldset label span.MJX_Assistive_MathML math mi[mathvariant=&quot;normal&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>css=.vert.vert-1 fieldset label:contains('Ψ')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=.vert.vert-8 fieldset label span.MJX_Assistive_MathML math mi[mathvariant=&quot;normal&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=.vert.vert-8 fieldset label:nth-child(4)</td>
+	<td>(d) |Ψ11⟩=exp⁡(−32i(ω1+ω2)t)a^2†a^1†|0⟩ is a correct statement of this state</td>
+</tr>
+<tr>
+	<td>verifyNotText</td>
+	<td>css=.vert.vert-8 fieldset label:nth-child(4)</td>
+	<td>(d) \(\left| {{\Psi }_{11}} \right\rangle =\exp \left( -\frac{3}{2}i\left( {{\omega }_{1}}+{{\omega }_{2}} \right)t \right)\hat{a}_{2}^{\dagger }\hat{a}_{1}^{\dagger }\left| 0 \right\rangle \) is a correct statement of this state </td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>time in seconds to load components: ${diff}</td>
+	<td></td>
+</tr>
+<!--checks that deprecated drag and drop conditionals in HumBio2A still work-->
+<tr>
+	<td>open</td>
+	<td>/courses/course-v1:Testing+Testing123+Evergreen/courseware/1ad6127becb74c0da561716348fb3abb/64aaf584801b4dd3b509c643dc7037f1/1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=.problem</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=tab_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=div[class=conditional-wrapper] div[data-type=HTMLModule]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div[class=conditional-wrapper] div[data-type=HTMLModule]</td>
+	<td>You need to answer a problem correctly before you can advance to the next one. Check your work and try again.</td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>css=.problem</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=tab_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=img[alt=&quot;Drop target image&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=div &gt; div &gt; div &gt; img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.check.Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=p.status</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=p.status</td>
+	<td>incorrect</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=tab_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=div[class=conditional-wrapper] div[data-type=HTMLModule]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div[class=conditional-wrapper] div[data-type=HTMLModule]</td>
+	<td>You need to answer a problem correctly before you can advance to the next one. Check your work and try again.</td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>css=.problem</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=tab_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=img[alt=&quot;Drop target image&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=div &gt; div &gt; div &gt; img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>dragAndDropToObject</td>
+	<td>css=div &gt; div &gt; div &gt; img</td>
+	<td>css=div.base_image_container &gt; div</td>
+</tr>
+<tr>
+	<td>dragAndDropToObject</td>
+	<td>//div[@id='problem_6bb910f97b28405fbe260213acfda91a']/div[2]/div/div/span/div/div[2]/div[2]/div/div[6]/div/img</td>
+	<td>//div[@id='problem_6bb910f97b28405fbe260213acfda91a']/div[2]/div/div/span/div/div/div[2]</td>
+</tr>
+<tr>
+	<td>dragAndDropToObject</td>
+	<td>//div[@id='problem_6bb910f97b28405fbe260213acfda91a']/div[2]/div/div/span/div/div[2]/div[2]/div/div[7]/div/img</td>
+	<td>//div[@id='problem_6bb910f97b28405fbe260213acfda91a']/div[2]/div/div/span/div/div/div[3]</td>
+</tr>
+<tr>
+	<td>dragAndDropToObject</td>
+	<td>//div[@id='problem_6bb910f97b28405fbe260213acfda91a']/div[2]/div/div/span/div/div[2]/div[2]/div/div[3]/div/img</td>
+	<td>//div[@id='problem_6bb910f97b28405fbe260213acfda91a']/div[2]/div/div/span/div/div/div[4]</td>
+</tr>
+<tr>
+	<td>dragAndDropToObject</td>
+	<td>//div[@id='problem_6bb910f97b28405fbe260213acfda91a']/div[2]/div/div/span/div/div[2]/div[2]/div/div[9]/div/img</td>
+	<td>//div[@id='problem_6bb910f97b28405fbe260213acfda91a']/div[2]/div/div/span/div/div/div[5]</td>
+</tr>
+<tr>
+	<td>dragAndDropToObject</td>
+	<td>//div[@id='problem_6bb910f97b28405fbe260213acfda91a']/div[2]/div/div/span/div/div[2]/div[2]/div/div[2]/div/img</td>
+	<td>//div[@id='problem_6bb910f97b28405fbe260213acfda91a']/div[2]/div/div/span/div/div/div[6]</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.check.Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=p.status</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=p.status</td>
+	<td>correct</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=tab_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=.vert.vert-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyNotText</td>
+	<td>css=div[class=conditional-wrapper] div[data-type=HTMLModule]</td>
+	<td>You need to answer a problem correctly before you can advance to the next one. Check your work and try again.</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=.problem</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=.problem</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=tab_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=.vert.vert-0 a:contains('Staff Debug Info')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'Delete Student State')])[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=.success:contains('deleted student state')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=lean_overlay</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
