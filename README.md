@@ -16,7 +16,7 @@ Once you've done that, open a Firefox or Chrome window pointing to lagunita.stan
 
 Hit the play button with three dashes beside it to run the entire suite.
 
-To run in Staging, you'll want to point your main window to the staging environment and get past the basic auth. Open the (same) test suite, and change the "base url" to our staging url - then it should just work to run.
+To run in Staging, you'll want to point your main window to the staging environment and get past the basic auth. Open the (same) test suite, and change the "base url" to our staging url - then it should just run.
 
 
 # Resources used along the way, possibly helpful now
