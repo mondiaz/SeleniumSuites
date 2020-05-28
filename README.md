@@ -4,8 +4,10 @@ This shows test cases and suites created to QA an online learning platform prior
 SeleniumTests
 =============
 
-This repository contains a couple of suites of end-to-end tests that my team and I used on the [Stanford OpenEdX Instance][c]([secondary link for historical reference][d]) to make sure it is healthy and happy.
-Especially useful after we do an install.
+This repository contains a couple of suites of end-to-end tests that my team and I used on the [Stanford OpenEdX Instance][c]([secondary link for historical reference][d]) to make sure it was healthy and happy.
+Especially useful after we would do an install.
+
+At present, the tests are in a partially working state, due to mid-merge updates and a retirement of the platform they were built to test.
 
 
 # How To Use
